@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int soma(int x, int y); // assinatura da função
+
+int main(int argc, char const *argv[])
+{
+    int num1, num2, num3;
+    printf("Digite primeiro numero:");
+    scanf("%d", &num1);
+    printf("Digite segundo numero:");
+    scanf("%d", &num2);
+    num3 = soma(num1, num2); // Chamada da função
+    printf("A soma de: %d + %d = %d\n", num1, num2, num3);
+    return 0;
+}
+
+/*
+    SÓ FOI POSSÍVEL CHAMAR ESSA FUNÇÃO ANTES DE SER DEFINIDA LÁ NO PROGRAMA PRINCIPAL PORQUE
+    FOI FEITA A SUA ASSINATURA ANTES.
+*/
+int soma(int x, int y)
+{ // Definição da função
+    return (x + y);
+}
